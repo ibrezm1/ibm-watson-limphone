@@ -9,3 +9,4 @@
 * [New Watson 2](https://cloud.ibm.com/docs/assistant?topic=assistant-getting-started)
 * [Stakblitz with terminal](https://stackblitz.com/github/webpack/webpack.js.org/tree/master/examples/getting-started?terminal=)
 * [IBM Certification](https://www.ibm.com/training/path/ibmcloudprofessionaldeveloper)
+* [Keep Note(**Restricted)](https://keep.google.com/#NOTE/1lPG5anOKeortNJy7puCMrEA8HQJ5xX2LG1cz6E4FzABZvQCG567jmM8DfzXQ9BY)
