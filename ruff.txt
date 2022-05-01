@@ -1,0 +1,43 @@
+SPEECH_TO_TEXT_APIKEY=x8yIwOF3lclW7iigE8yx99lS6GaLgmxlMEvhSvWhDsQO
+SPEECH_TO_TEXT_IAM_APIKEY=x8yIwOF3lclW7iigE8yx99lS6GaLgmxlMEvhSvWhDsQO
+SPEECH_TO_TEXT_URL=https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/152395a9-b075-4405-aed8-82b254611fd6
+SPEECH_TO_TEXT_AUTH_TYPE=iam
+
+
+TEXT_TO_SPEECH_APIKEY=xd-LgDkN_jQC7WdKmzY1lCLHYo4yeTHfQ7vFaZNk58P-
+TEXT_TO_SPEECH_IAM_APIKEY=xd-LgDkN_jQC7WdKmzY1lCLHYo4yeTHfQ7vFaZNk58P-
+TEXT_TO_SPEECH_URL=https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/b3f694f2-2fde-4984-83b1-31856e5a1af7
+TEXT_TO_SPEECH_AUTH_TYPE=iam
+
+ASSISTANT_APIKEY=lg-FTqmHQELiLM5SR4pEwREQjf-G2ZvBtzX3TiqTFNUw
+ASSISTANT_IAM_APIKEY=lg-FTqmHQELiLM5SR4pEwREQjf-G2ZvBtzX3TiqTFNUw
+ASSISTANT_URL=https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/722abe06-c92c-4fe3-98dd-9e123a15c949
+ASSISTANT_AUTH_TYPE=iam
+
+
+curl -X POST -u "apikey:lg-FTqmHQELiLM5SR4pEwREQjf-G2ZvBtzX3TiqTFNUw" --header "Content-Type:application/json" --data "{\"input\": {\"text\": \"Hello\"}}" "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/722abe06-c92c-4fe3-98dd-9e123a15c949?version=2021-06-14"
+
+curl -X GET -u "apikey:lg-FTqmHQELiLM5SR4pEwREQjf-G2ZvBtzX3TiqTFNUw" "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/722abe06-c92c-4fe3-98dd-9e123a15c949"
+
+/assistants/79d51c0b-f7f7-4aa2-97b1-2fd4145a4e66/
+
+{
+  "apikey": "lg-FTqmHQELiLM5SR4pEwREQjf-G2ZvBtzX3TiqTFNUw",
+  "iam_apikey_description": "Auto-generated for key crn:v1:bluemix:public:conversation:eu-gb:a/2dc14f0719df4898b33a09c3663af357:722abe06-c92c-4fe3-98dd-9e123a15c949:resource-key:ca5d5617-14d5-49a5-a748-36c6d8ea6a6c",
+  "iam_apikey_name": "Auto-generated API key",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/2dc14f0719df4898b33a09c3663af357::serviceid:ServiceId-2130e50f-9b66-4f36-b1bf-86b2e7a373f5",
+  "url": "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/722abe06-c92c-4fe3-98dd-9e123a15c949"
+}
+
+
+url=https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/722abe06-c92c-4fe3-98dd-9e123a15c949
+apikey=lg-FTqmHQELiLM5SR4pEwREQjf-G2ZvBtzX3TiqTFNUw 
+assistant_id=79d51c0b-f7f7-4aa2-97b1-2fd4145a4e66 #Decode url and get the assistantid
+curl -X POST -u "apikey:$apikey" "$url/v2/assistants/$assistant_id/sessions?version=2021-06-14"
+
+session_id=37d8a94d-9e54-4306-980c-7a18330abb1c
+curl -X POST -u "apikey:$apikey" --header "Content-Type:application/json" --data "{\"input\": {\"text\": \"Hello\"}}" "$url/v2/assistants/$assistant_id/sessions/$session_id/message?version=2021-06-14"
+
+cf_url=https://soe-vgw-wcs2322.eu-gb.mybluemix.net/
+curl -X POST -u "apikey:$apikey" --header "Content-Type:application/json" --data "{\"input\": {\"text\": \"Hello\"}}" "$cf_url"

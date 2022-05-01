@@ -1,0 +1,14 @@
+---
+applications:
+- name: soe-watson
+  random-route: false
+  host: soe-vgw-wcs2322
+  memory:  256M
+  env:
+    wcs_username: apikey
+    wcs_password: lg-FTqmHQELiLM5SR4pEwREQjf-G2ZvBtzX3TiqTFNUw
+    wcs_workspace: 79d51c0b-f7f7-4aa2-97b1-2fd4145a4e66
+    show_all_logs: false
+    receiver_email_address: yourstruly@gmail.com
+    sender_email_address: abc@gmail.com
+    sender_email_password: xyz123
